@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Featured Projects</h1>
+{% for project in projects %}
+    <article style="border-bottom: 1px solid #e5e7eb; padding: 12px 0;">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.desc }}</p>
+    </article>
+{% endfor %}
+{% endblock %}
