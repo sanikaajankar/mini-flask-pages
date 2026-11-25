@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Welcome to the Home Page</h1>
-<p>This mini Flask application demonstrates multi-page routing using separate Python view functions and Jinja2 HTML templates.</p>
+<p>This site uses a shared <code>base.html</code> template, dynamic Jinja2 navigation, and page-specific blocks.</p>
+<ul>
+    {% for feature in features %}
+        <li>{{ feature }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
