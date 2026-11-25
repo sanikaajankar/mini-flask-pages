@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>About This Project</h1>
-<p>Built with Python and Flask, this project separates presentation logic into reusable HTML templates under the <code>templates/</code> directory.</p>
+<h1>About This Application</h1>
+<p>Every route passes dynamic Python data into Jinja2 templates for clean, maintainable rendering:</p>
+<ul>
+    {% for tech in tech_stack %}
+        <li>{{ tech }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
